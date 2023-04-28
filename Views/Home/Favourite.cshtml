@@ -1,0 +1,71 @@
+﻿@using System.Text.RegularExpressions;
+<h1>مفضلتي</h1>
+
+<div class="FavPageCont">
+    @{
+        foreach (var Fav in @ViewBag.MFav)
+        {
+            <div class="FavDivs">
+                <a class="FavPageImg" href="~/Home/Media/?id=@Fav.Id"><p class="ppppp">@Fav.Title</p>
+                     <img src="~/images/@Fav.Poster" />
+                </a>
+                <div class="removedicv" onclick="RemoveMFunk(@Fav.Id)">remove</div>
+            </div>
+        }
+    }
+</div>
+<hr />
+
+<div class="FavPageCont">
+    @{
+        foreach (var SFav in @ViewBag.SFav)
+        {
+            <div  class="FavDivs">
+                <a class="FavPageImg" href="~/Home/Seasons/?Mediaid=@SFav.Mediaid&id=@SFav.id">
+                    <p class="ppppp">@SFav.name</p>
+                    <img src="~/images/@SFav.Poster" />
+                </a>
+                <div onclick="RemoveSFunk(@SFav.id)" class="removedicv">remove</div>
+            </div>
+        }
+    }
+</div>
+<hr />
+<div class="FavPageContEp">
+    @{
+        foreach (var Fav in @ViewBag.EFav)
+        {
+            <div class="FavDivs">
+                <a href="~/Home/Episode?Epsid=@Fav.id&ep=@(Regex.Match(Fav.name, @"\d+").Value)" id="FavDivsEPID" class="FavPageImg">
+                    <p class="ppppp">@Fav.name</p>
+                    <img src="~/images/@Fav.Thumbnail" />
+                </a>
+                <div onclick="RemoveFunk(@Fav.id)" class="removedicv">remove</div>
+            </div>
+        }
+    }
+</div>
+
+<script>
+    var RemoveFunk = (id)=>{
+        fetch('/WishLists/Delete?Type=Episode&id=' + id, {
+        method: 'DELETE',
+        }).then(()=>{
+            setTimeout(location.reload(),100)
+        });
+    }
+    var RemoveSFunk = (id) => {
+        fetch('/WishLists/Delete?Type=Season&id=' + id, {
+            method: 'DELETE',
+        }).then(() => {
+            setTimeout(location.reload(), 100)
+        });
+    }
+    var RemoveMFunk = (id) => {
+        fetch('/WishLists/Delete?Type=Media&id=' + id, {
+            method: 'DELETE',
+        }).then(() => {
+            setTimeout(location.reload(), 100)
+        });
+    }
+</script>

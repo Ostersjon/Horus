@@ -1,0 +1,45 @@
+﻿<h1 class="searcheditt">نتائج البحث</h1>
+<div class="SearchContDiv">
+    @{
+        var pagen = Convert.ToInt32(Context.Request.Query["page"]);
+        var searched = Context.Request.Query["searched"];
+    }
+    @{
+        foreach (var media in @ViewBag.Medias)
+        {
+            <div class="SearchDivs">
+                <a href="~/Home/Media/?id=@media.Id" class="FavPageImg">
+                    <p class="ppppp">@media.Title</p>
+                    <img src="~/images/@media.Poster" />
+                </a>
+            </div>
+            if (media.Discriminator != "Movie")
+            {
+                foreach (var season in media.seasons)
+                {
+                    <div class="SearchDivs">
+                        <a href="~/Home/Seasons/?Mediaid=@media.Id&id=@season.id" class="FavPageImg">
+                            <p class="ppppp">@season.name</p>
+                            <img src="~/images/@season.Poster" />
+                        </a>
+                    </div>
+                }
+            }
+        }
+    }
+    <div class="paginateGen">
+        @{
+            for (var i = 1; i <= @ViewBag.pages; i++)
+            {
+                if (i == pagen)
+                {
+                    <a id="CurrentPageGen">@(i)</a>
+                }
+                else
+                {
+                    <a href="~/Home/Search?searched=@searched&page=@i">@(i)</a>
+                }
+            }
+        }
+    </div>
+</div>

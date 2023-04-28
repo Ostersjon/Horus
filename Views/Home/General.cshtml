@@ -1,0 +1,177 @@
+﻿@{
+    var production = int.TryParse(Context.Request.Query["production"], out int producftioniD);
+    var category = int.TryParse(Context.Request.Query["category"], out int CagtID);
+    var type = Context.Request.Query["type"][0];
+    var genre = int.TryParse(Context.Request.Query["genre"], out int GengID);
+    var page = Convert.ToInt32(Context.Request.Query["page"]);
+
+    var productioniD = Context.Request.Query["production"];
+    var CatID = Context.Request.Query["category"];
+    var GenID = Context.Request.Query["genre"];
+}
+<div>
+    <div class="headdr">
+        <div>
+            <span>الفئة</span><select onchange="CategoryFunk(this)" id="Scategory">
+                @{
+                    if (!category)
+                    {
+                        <option selected="selected" value="Any">الكل</option>
+                    }
+                    else
+                    {
+                        <option value="Any">الكل</option>
+                    }
+                }
+                @foreach (var cat in @ViewBag.AllCategories)
+                {
+                    if (cat.id == CagtID)
+                    {
+                        <option selected="selected" value="@cat.id">@cat.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@cat.id">@cat.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div>
+            <span>التصنيف</span><select onchange="GenreFunk(this)" id="Sgenre">
+                @{
+                    if (!genre)
+                    {
+                        <option selected="selected" value="Any">الكل</option>
+                    }
+                    else
+                    {
+                        <option value="Any">الكل</option>
+                    }
+                }
+                @foreach (var gen in @ViewBag.AllGenres)
+                {
+                    if (gen.id == GengID)
+                    {
+                        <option selected="selected" value="@gen.id">@gen.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@gen.id">@gen.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div>
+            <span>انتاج</span><select onchange="ProFunk(this)" id="SProdution">
+                @{
+                    if (!production)
+                    {
+                        <option selected="selected" value="Any">الكل</option>
+                    }
+                    else
+                    {
+                        <option value="Any">الكل</option>
+                    }
+                }
+                @foreach (var prr in @ViewBag.productioniD)
+                {
+                    if (prr.Id == producftioniD)
+                    {
+                        <option selected="selected" value="@prr.Id">@prr.name</option>
+                    }
+                    else
+                    {
+                        <option value="@prr.Id">@prr.name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div>
+            <span>النوع</span><select onchange="TypeFunk(this)" id="SType">
+                @{
+                    if (type == "Any")
+                    {
+                        <option selected="selected" value="Any">الكل</option>
+                    }
+                    else
+                    {
+                        <option value="Any">الكل</option>
+                    }
+                }
+                @{
+                    if (type == "Movie")
+                    {
+                        <option selected="selected" value="Movie">افلام</option>
+                    }
+                    else
+                    {
+                        <option value="Movie">افلام</option>
+                    }
+                }
+                @{
+                    if (type == "TvShows")
+                    {
+                        <option selected="selected" value="TvShows">مسلسلات</option>
+                    }
+                    else
+                    {
+                        <option value="TvShows">مسلسلات</option>
+                    }
+                }
+                @{
+                    if (type == "Cartoon")
+                    {
+                        <option selected="selected" value="Cartoon">انمي</option>
+                    }
+                    else
+                    {
+                        <option value="Cartoon">انمي</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="HomeMoviesGridContainer">
+
+        @{
+            foreach (var media in @ViewBag.Medias)
+            {
+
+                <a href="/Home/Media/?id=@media.Id" class="SearchDivs">
+                    <div class="FavPageImg">
+                        <p class="ppppp">@media.Title</p>
+                        <img src="~/images/@media.Poster" />
+                    </div>
+                </a>
+
+            }
+        }
+
+    </div>
+
+    <div class="paginateGen">
+        @{
+            for (var i = 1; i <= @ViewBag.pages; i++)
+            {
+                if (i == @page)
+                {
+                    <a id="CurrentPageGen">@(i)</a>
+                }
+                else
+                {
+                    <a href="~/Home/General?category=@CatID&type=@type&genre=@GenID&production=@productioniD&page=@(i)">@(i)</a>
+                }
+            }
+        }
+    </div>
+
+    <script>
+        let CategoryFunk = (e) => window.location.href = "/Home/General?category=" + e.value + "&type=@type&genre=@GenID&production=@productioniD&page=1";
+        let GenreFunk = (x) => window.location.href = "/Home/General?category=@CatID&type=@type&genre=" + x.value + "&production=@productioniD&page=1";
+        let ProFunk = (a) => window.location.href = "/Home/General?category=@CatID&type=@type&genre=@GenID&production=" + a.value + "&page=1";
+        let TypeFunk = (w) => window.location.href = "/Home/General?category=@CatID&type=" + w.value + "&genre=@GenID&production=@productioniD&page=1";
+    </script>

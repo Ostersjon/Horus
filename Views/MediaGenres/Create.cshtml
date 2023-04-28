@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MediaGenres</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <h1>@ViewBag.Mediaid</h1>
+            <form asp-action="Create" >
+
+            @foreach (var genre in ViewBag.Geners)
+            {
+                    <div  class="checkbox">
+                    <label>
+                            <input type="checkbox" name="numms" value="@genre.id" /> @genre.Name
+                    </label>
+                </div>
+            }
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

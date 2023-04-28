@@ -1,0 +1,122 @@
+﻿@model Castle.Dtos.EpisodeDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Episode</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label  class="control-label"></label>
+                <select id="leseasonid" class="form-control" asp-items="ViewBag.medias"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="seasonsid" class="control-label"></label>
+                <select id="leseasonselect" asp-for="seasonsid" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <select id="EpName" asp-for="name" class="form-control" ></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thumbnail" class="control-label"></label>
+                <input asp-for="Thumbnail" class="form-control" />
+                <span asp-validation-for="Thumbnail" class="text-danger"></span>
+            </div>
+            <div class="iflexi"><h1>Episodes</h1> <h1 class="Epidsodescount"></h1></div>
+            <div class="form-group">
+                <label asp-for="Video" class="control-label"></label>
+                <input asp-for="Video" class="form-control" />
+                <span asp-validation-for="Video" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        var MediasDocument = document.querySelector('#leseasonid');
+        var select = document.querySelector('#leseasonselect');
+        var EpisodesDiv = document.querySelector('#EpName');
+
+
+        setTimeout(()=>{
+
+            fetch('GetFirstEps?mediaid=' + MediasDocument.value)
+                .then(res => res.json()).then(data => {
+                    EpisodesDiv.innerText = data;
+                     let t = document.createElement('option');
+                     t.innerText = data;
+                     t.value = data;
+                     EpisodesDiv.append(t);
+                })
+        },200)
+
+
+        fetch('GetSeasonsof?mediaid=' + MediasDocument.value)
+            .then(res => res.json()).then((data, i) => {
+                $.each(data, function (i, data) {
+                    let d = document.createElement('option');
+                    d.innerText = data.name;
+                    d.value = data.id;
+                    select.append(d);
+                });
+            });
+
+
+        MediasDocument.addEventListener('change',(e)=>{
+            select.innerText = '';
+            EpisodesDiv.innerText = '';
+            fetch('GetSeasonsof?mediaid=' + e.target.value)
+            .then(res => res.json()).then((data,i) =>{
+                    $.each(data,function(i,data){
+                        let d = document.createElement('option');
+                        d.innerText = data.name;
+                        d.value = data.id;
+                        select.append(d);
+               })
+            })
+            fetch('GetFirstEps?mediaid=' + e.target.value)
+                .then(res => res.json()).then(data => {
+                    EpisodesDiv.innerText = data;
+                })
+            setTimeout(() => {
+
+                fetch('GetFirstEps?mediaid=' + MediasDocument.value)
+                    .then(res => res.json()).then(data => {
+                        EpisodesDiv.innerText = data;
+                        let t = document.createElement('option');
+                        t.innerText = data;
+                        t.value = data;
+                        EpisodesDiv.append(t);
+                    })
+            }, 200)
+        })
+
+        select.addEventListener('change',e=>{
+            fetch('GetEpisodesof?seasonid=' + e.target.value)
+                .then(res => res.json()).then(data => {
+                    EpisodesDiv.innerText = data;
+                    let t = document.createElement('option');
+                    t.innerText = data;
+                    t.value = data;
+                    EpisodesDiv.append(t);
+                })
+        })
+    </script>
+}

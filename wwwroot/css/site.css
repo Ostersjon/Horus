@@ -1,0 +1,1361 @@
+﻿html {
+  font-size: 14px;
+}
+
+
+a[b-dfvonb83xd]{
+    color:white !important;
+}
+.HomeItemsContWhole {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 35px 15px 20px 0;
+}
+
+.searcheditt {
+    text-align: end;
+    margin: 2% 3% 0 0;
+}
+@media (min-width: 768px) {
+    html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+#logooo {
+    height: 70px;
+    width: 170px;
+}
+#logooo img{
+    height:100%;
+    width:100%;
+    object-fit:scale-down;
+}
+#SearchIn{
+    border:none;
+    outline:none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+html {
+    font-size: 14px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:root {
+    /*    --bs-body-bg: #202126;*/
+    --bs-body-bg: #202126;
+    --bs-body-bg: #221d31;
+    --bs-body-bg: #0c0f21;
+    --bs-body-color: white;
+}
+
+.table {
+    color: white;
+}
+
+.seasonh2div {
+        display:flex;
+    direction:rtl;
+}
+
+    .seasonh2div div {
+        padding: 10px 0;
+    }
+
+.ALinkEPS {
+    position: relative;
+}
+
+    .ALinkEPS::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(143deg,#fff0,#0000,#000000f7);
+    }
+
+    .ALinkEPS p {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        color: white;
+        font-weight: 600;
+    }
+
+a:active {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.Homeitemsmediadivimg {
+    height: 200px;
+}
+
+Homeitemsmediadivimg img {
+    height: 100%;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.RedBtn {
+    background-color: #dc3545 !important;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.container {
+    padding: 0% 0;
+    max-width: 100%;
+    margin-bottom: 160px;
+    margin-top:95px;
+}
+
+header {
+    margin-bottom: 95px;
+}
+
+.navbar {
+    padding: 0px 5%;
+    background-color: rgb(15, 4, 34) !important;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    top: 0;
+    min-height: 95px;
+    max-height: 95px;
+    background: linear-gradient(91.7deg, rgb(171, 220, 247) -4.3%, rgb(25, 31, 77) 101.8%);
+    background: linear-gradient(91.7deg, rgb(0, 0, 0) -4.3%, rgb(95, 102, 155) 101.8%);
+}
+
+.iflexi {
+    display: flex;
+}
+
+    .iflexi h1 {
+        margin: 0 15px;
+    }
+
+.iflexiy {
+    display: flex;
+    justify-content:end;
+    flex-wrap:wrap;
+}
+
+    .iflexiy div {
+        background-color: brown;
+        margin: 0 0px 0 10px;
+        min-width: 100px;
+        text-align: center;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 50px;
+    }
+
+.EpisodeVideo {
+    width: 70%;
+    height: 750px;
+    margin: 1% auto;
+    display: flex;
+}
+
+.flexdivv {
+    display: flex;
+    text-align: end;
+    justify-content: end
+}
+
+.MediaInfoDivPage h2 {
+    margin-bottom: 30px;
+}
+
+.flexdivv p {
+    padding: 5px 25px;
+    min-width: 120px;
+    max-width: 120px;
+    background-color: #504457;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.container-fluid {
+    flex-direction: row-reverse;
+}
+
+.navbar-nav a {
+    color: white !important
+}
+
+.navbar-nav {
+    /*    justify-content:end !important;*/
+}
+
+.categoriescont {
+    /*    width: 9vw;*/
+    height: 170px;
+    padding: 0%;
+    box-shadow: 2px 2px #d79d3d;
+    transition: 0.2s ease-in-out;
+}
+
+    .categoriescont img {
+        width: 100%;
+        height: 100%;
+        /*        border-radius: 50%;*/
+        object-fit: cover;
+        object-fit: cover;
+        object-position: bottom;
+        /*        border: 0.2vw solid grey;*/
+        background-color: #b19e8e;
+        cursor: pointer;
+        /*        box-shadow: 0.2vw 0.2vw grey;*/
+        background-image: linear-gradient(34deg,white,black,white);
+        background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255));
+        background-image: linear-gradient(to top, rgb(45, 33, 60), rgb(77, 19, 62), rgb(83, 21, 53));
+    }
+
+}
+
+.owl-stage-outer {
+    padding: 1% 0;
+}
+
+.card-title text-center h4 {
+    font-size: 0.5vw !important;
+}
+
+.item:nth-child(1) {
+    width: 9vw !important;
+    padding: 0.5vw;
+}
+
+.card {
+    /*    padding:0 5%;*/
+    background-color: #fff0;
+}
+#Username {
+    background-color: #4d4d4d;
+}
+.card h4 {
+    font-size: 17px;
+    padding: 7px 0vw;
+    background-color: #48304b;
+    /*        border-radius: 2vw 0;*/
+    color: wheat;
+    text-decoration: none !important;
+    /*        margin: 0 auto;*/
+    display: none;
+}
+.categoriescont:hover {
+    box-shadow: 4px 4px #d79d3d;
+    transition:0.2s ease-in-out;
+}
+.navbar-brand h5 {
+    font-size: 28px;
+    height: fit-content;
+    color: white;
+}
+.navbar-toggler{
+
+}
+.card-body {
+    padding: 0rem;
+}
+.returntoorg {
+/*    background-color:antiquewhite;*/
+    display:flex;
+    justify-content:end;
+    margin:15px 0 0 0 !important;
+}
+    .returntoorg a {
+        background-color: #504457;
+        width: fit-content;
+        margin: 0;
+        padding: 15px 50px;
+        display:block;
+        color:white;
+    }
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+.carousel-inner {
+    position: relative;
+}
+/*    .carousel-inner::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right,black 30%,black 35%,#fff0 45%,#fff0);
+        z-index: 1;
+    }*/
+
+.c-item {
+    height: 650px;
+}
+
+    .c-item img {
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        object-fit: scale-down;
+        object-position: right;
+        z-index: 10;
+    }
+
+.MainTextDiv {
+    position: absolute;
+    top: 500px;
+    left: 180px;
+    color: white;
+    width: 300px;
+    text-align: center
+}
+
+    .MainTextDiv span {
+        width: 100%;
+        /*        border-bottom:2px solid white;*/
+        background-color: azure;
+        height: 1px;
+        margin: auto 0;
+    }
+
+    .MainTextDiv p {
+        margin: auto 8px;
+    }
+#loginjk {
+    display: flex;
+    flex-direction: column !important;
+    text-align: end !important;
+    align-items: end;
+    padding:0 5%;
+}
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+.MainTextDiv a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-weight: 500;
+    background-color: #0f79af;
+    border: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+        .MainTextDiv button:hover {
+            /*background-color: #dc3545;
+transition: 0.2s ease-in-out;*/
+        }
+
+    .MainTextDiv div {
+        display: flex;
+        padding: 10px 0;
+    }
+
+.HomeMoviesGridContainer {
+    display: flex;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 75vh;
+}
+
+.owl-item {
+}
+
+.HomeMoviesGridImgDiv {
+    width: 100%;
+    height: 450px;
+}
+
+    .HomeMoviesGridImgDiv img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.HomeMovieEachDiv {
+    text-align: center;
+    background-color: brown
+}
+
+.HomeMoviesGridTitle {
+    padding: 10px;
+}
+
+.HmItImgDiv {
+    height: 430px;
+    display: block;
+    width: 100%;
+}
+
+    .HmItImgDiv img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+.containerHMIT {
+    text-align: end;
+    font-size: 25px;
+    padding: 0 2%;
+}
+.cithc{
+    display:flex;
+    justify-content:end;
+    padding:0 1%;
+}
+.cithc a {
+    width:fit-content;
+    display: block;
+    padding: 5px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+    .cithc a:hover{
+    color: wheat;
+    }
+
+    .MediaPageDivImg {
+        width: 400px;
+        height: 520px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .MediaPageDivImg img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+.MediaContanierPage {
+    padding: 5% 0% 0 9%;
+    display: grid;
+    justify-content: end;
+    text-align: end;
+    margin-top: -500px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.MediaInfoDivPage {
+    padding: 0 5%;
+    position:relative;
+}
+/*    .MediaInfoDivPage::before{
+        content:'';
+        width:100%;
+        height:100%;
+        top:0;
+        right:0;
+        background-color:black;
+    position:absolute;
+    filter:blur(5px);
+    z-index:-1;
+    }*/
+
+.Seasons {
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: row-reverse ;
+        flex-wrap:wrap;
+}
+
+.h1Center {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.Seasons a {
+    display: block;
+    background-color: brown;
+    width: 300px;
+    font-weight: 600;
+    height: 440px;
+    /*    border-radius: 55px;*/
+    border: solid 1.4px white;
+    box-shadow: 1px 1px white;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+    .Seasons a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.EpisodesDivCont {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    flex-wrap:wrap;
+}
+
+    .EpisodesDivCont a {
+        width: 300px;
+        height: 170px;
+        margin: 8px
+    }
+
+.coverseassonsimg {
+    width: 100%;
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+.form-control{
+    background-color:gray;
+    color:white;
+}
+.coverseassonsimg:before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: linear-gradient(to left,#000,#00000073,#0000);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    .coverseassonsimg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position:top;
+    }
+
+.EpisodesDivCont a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.seasonsLinkMedia {
+    height: 500px;
+}
+
+.navbar-expand-sm .navbar-collapse {
+    flex-direction: row-reverse;
+    margin: 0 90px 0 0px;
+}
+.navbar-expand-sm .navbar-nav{
+    flex-direction:row-reverse;
+}
+#IUSERIMG {
+    width: 70px;
+    height: 70px;
+}
+#IUSERIMG img{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+
+#BtnLogout{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color:white;
+}
+#BtnLogout button{
+    color:white;
+}
+.aboutdivv{
+    margin-bottom:25px;
+}
+.WatchLaterForm button {
+    background-color: #a52a2a;
+    padding: 14px 20px;
+    margin-top: 40px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 50px;
+    margin: auto;
+    border: 1px solid;
+}
+
+.WatchLaterForm input{
+    display:none;
+}
+#FavDivsEPID {
+    height: 180px;
+    width: 300px;
+}
+/*    #FavDivsEPID .FavPageImg {
+   height: 100%;
+    width: 90%;
+    }*/
+#FavDivsEPID img{
+    border-radius:5px;
+}
+.FavPageContEp {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(310px,1fr));
+    padding: 1%;
+    direction:rtl;
+}
+.FavPageImg {
+    height: 400px;
+    width: 290px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display:block;
+    color:white;
+}
+    .FavPageImg p {
+        position: absolute;
+        bottom: -100%;
+        right: 10px;
+        max-width: 90%;
+        word-wrap: break-word;
+        color:white;
+    }
+    .FavPageImg:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(190deg,#fff0,black);
+        top: 200%;
+        left: 0;
+        transition: 0.2s ease-in-out;
+        opacity:0;
+    }
+.aboutdivv{
+    margin-bottom:25px;
+}
+.FavPageImg:hover::before {
+    top: 0;
+    transition: 0.2s ease-in-out;
+    opacity: 80%;
+}
+    .FavPageImg:hover > .ppppp {
+        bottom: 0%;
+        transition: 0.2s ease-in-out;
+    }
+        .FavPageImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.FavPageCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    padding: 1%;
+    direction: rtl;
+}
+
+.FavDivs{
+    margin:15px 0;
+    position:relative;
+}
+
+.removedicv {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    background-color: brown;
+    padding:3px 5px;
+}
+.ppppp{
+    direction:rtl;
+}
+
+.additmedia {
+    display: flex;
+    margin-top: 25px;
+    justify-content: end;
+}
+
+.Yourratediv {
+    background-color: #fff;
+    color: #2598d9;
+    font-weight: 600;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.PrevNext {
+    display: flex;
+    justify-content: space-around;
+}
+    .PrevNext a {
+        display: block;
+        color: white;
+        background-color: #252942;
+        padding: 15px 25px;
+        border-radius: 0px;
+        cursor: pointer;
+        min-width: 170px;
+        text-align: center;
+        height: 660px;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 200px;
+        max-width: 200px
+    }
+.linkeppage {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 115px 25px 10px 0;
+    justify-content: space-between;
+}
+.firstcolep{
+    display:flex;
+    flex-direction:row-reverse;
+}
+.linkeppage span {
+    display: block;
+    height: fit-content;
+    margin: auto 0;
+    font-weight: 600;
+}
+.linkeppage a{
+    color:white;
+    display:flex;
+    flex-direction:row-reverse;
+    margin:0 10px;
+    background-color:brown;
+    padding:10px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    direction:rtl;
+    text-align:start;
+}
+    .linkeppage a p {
+        display: flex;
+        flex-direction: column;
+        margin: 0 4px;
+        justify-content: center;
+    }
+
+.coloms{
+    display:flex;
+}
+
+.Searchapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.maint {
+/*    background-color: antiquewhite;
+    background-color: #48304b;*/
+    min-width: 100px;
+    text-align: center;
+    margin: 0 5px;
+/*    border-radius: 50px;*/
+/*    border: 1.9px solid #d6b592;*/
+    box-shadow: 0px 0px #d6b592;
+}
+.maint a{
+/*    color:aqua !important;*/
+}
+.pom{
+    margin-bottom:0rem !important;
+    margin:0 auto;
+}
+.prodimg {
+    width: 220px;
+    height: 100px;
+    /*    margin-left:15px;*/
+    box-shadow: 2px 2px sandybrown;
+    z-index: 1;
+}
+.prodimg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.divsearchdiv input {
+    width: 320px;
+    border: none;
+    background-color: #43355c;
+    border-radius: 50px 0 0 50px;
+    padding: 0 5%;
+    color: wheat;
+    
+}
+.divsearchdiv button {
+    width: 80px;
+    color:wheat;
+    background-color: #43355c;
+    border: none;
+    border-radius: 0 50px 50px 0;
+}
+.owl-nav span {
+    background-color: brown;
+    min-width: 500px !important;
+    padding: 0px 62px;
+    border-radius: 50px;
+}
+    .owl-nav span:hover {
+        background-color: #0f79af;
+        transition: 0.3s ease-in-out;
+    }
+    .owl-nav span:hover ~ .owl-nav button{
+    background-color: palevioletred;
+}
+.owl-nav button{
+    background:none !important  ;
+}
+.rateallwrap {
+    display: flex;
+    margin-left: 20px;
+}
+.rating {
+    width: fit-content;
+    height: 50px;
+    padding: 5px 10px;
+    margin: auto;
+    border-radius: 30px 0 0 30px;
+    background: #FFF;
+    display: block;
+    overflow: hidden;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    box-shadow: 4px 4px #ccc;
+}
+.rating label {
+    font-size:25px
+}
+    .rating:not(:checked) > input {
+        display: none;
+    }
+
+/* - - - - - RATE */
+#rate {
+    top: -65px;
+}
+
+    #rate:not(:checked) > label {
+        cursor: pointer;
+        float: right;
+        width: 40px;
+        height: 50px;
+        display: block;
+        color: rgba(0, 135, 211, .4);
+        line-height: 40px;
+        text-align: center;
+    }
+
+        #rate:not(:checked) > label:hover,
+        #rate:not(:checked) > label:hover ~ label {
+            color: rgba(0, 135, 211, .6);
+        }
+
+    #rate > input:checked + label:hover,
+    #rate > input:checked + label:hover ~ label,
+    #rate > input:checked ~ label:hover,
+    #rate > input:checked ~ label:hover ~ label,
+    #rate > label:hover ~ input:checked ~ label {
+        color: rgba(0, 135, 211, .8);
+    }
+
+    #rate > input:checked ~ label {
+        color: rgb(0, 135, 211);
+    }
+
+.ratebbtn {
+    background-color: #99cfed;
+    padding: 0px 27px;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    margin: auto 0 auto 0px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    color: snow;
+    box-shadow: 0 4px #ccc;
+    transition: 0.3s ease-in-out;
+    display: flex;
+}
+    .ratebbtn:hover {
+        background-color: #2598d9;
+        transition:0.3s ease-in-out;
+    }
+.SearchContDiv{
+    display:flex;
+    padding:1% 0%;
+    display:flex;
+    flex-direction:row-reverse;
+        flex-wrap:wrap;
+        justify-content:center;
+}
+.SearchDivs{
+    margin:5px;
+
+}
+.avratediv {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    margin-bottom: 15px;
+}
+.ratitdiv {
+    font-size: 20px;
+    padding: 10px 150px;
+    font-weight: 600;
+/*    background-color: #fff;*/
+    width: fit-content;
+    border-radius: 0;
+    color: #938252;
+    margin-bottom: 15px;
+    height: fit-content;
+    margin: auto 0;
+    box-shadow: 2px 2px sandybrown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    transform: rotate(-35deg);
+    left: -115px;
+    background: linear-gradient(91.7deg, rgb(0, 0, 0) -4.3%, rgb(95, 102, 155) 101.8%);
+}
+    .ratitdiv svg{
+        margin:auto 5px;
+    }
+    .productionscont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 70px 0;
+    }
+.imgproductionsdiv {
+    width: 300px;
+    height: 140px;
+    margin: 5px;
+}
+    .imgproductionsdiv img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    .divsearchdiv {
+        display: flex;
+        height: 50px;
+    }
+#CurrentPageGen {
+    background-color: #aad6fd;
+    color: #313942;
+}
+.paginateGen a {
+    background-color: #ffffff29;
+    padding: 10px 16px;
+    margin: 0 5px;
+    font-weight: 600;
+    color: blueviolet;
+    /*    border: 2px solid #5ab6ed;*/
+    color: #fff;
+    border-radius: 0px;
+}
+.paginateGen {
+    background-color: aqua;
+    background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(122, 101, 149) 101.8%);
+    width: 94%;
+    margin: 0 auto;
+    padding: 6px 0px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+}
+.returntoorg{
+    justify-content:end;
+}
+.headdr {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+    .headdr div{
+        display:flex;
+        flex-direction:column;
+    }
+.headdr select{
+    width:300px;
+    padding:20px;
+}
+    .headdr select option{
+/*        width: 300px;*/
+        padding: 20px;
+    }
+select {
+    word-wrap: normal;
+    background-color: #323741;
+    padding: 20px;
+    color: white;
+    border: none;
+    margin: 0 5px;
+    min-width: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient( 24deg,#34364f,#2c2f48,#5c6397);
+}
+select option{
+    padding:50px !important;
+    margin:5px;
+
+}
+.seleectpromainsel {
+    background: black;
+    margin-bottom: 0;
+    position: relative;
+    cursor: pointer;
+    word-wrap: normal;
+    background-color: #323741;
+    padding: 20px;
+    color: white;
+    border: none;
+    margin: 0 5px;
+    min-width: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    .seleectpromainsel:visited + .seleectpro {
+        display: block;
+    }
+.seleectpro {
+    max-height: 400px;
+    overflow: scroll;
+    display: none;
+    position: absolute;
+}
+.seleectpro p{
+}
+.seleectpro div{
+    width:150px;
+    height:50px;
+}
+    .seleectpro div img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+.form-floating > label {
+    right:0 ;
+}
+.containerFoot {
+    background-image: linear-gradient( 24deg,#34364f,#2c2f48,#5c6397);
+    text-align: center;
+    padding: 0 0 20px 0;
+/*    display: flex;
+    justify-content: center;*/
+}
+.footer[b-dfvonb83xd] {
+    line-height: 50px !important;
+}
+.containerFoot a {
+    margin: 0 5px;
+    padding: 7px 15px;
+    border-radius: 50px;
+    min-width: 120px !important;
+    width: 120px !important;
+    color: white;
+}
+        .containerFoot a:visited{
+        color:white;
+        }
+        .containerFoot svg {
+            color: white;
+        }
+.Whatts {
+    background-color: #5b6f6f;
+}
+.linkdin {
+    background-color: #8d77a0;
+    padding: 7px 25px !important;
+}
+@media screen and (max-width: 500px) {
+    .HmItImgDiv {
+        height: 270px;
+    }
+    .container {
+        margin-top: 70px;
+    }
+    .MainTextDiv a{
+        padding:10px;
+    }
+    .MainTextDiv {
+        position: unset;
+        width: 100%;
+        padding: 5%;
+    }
+    .headdr select{
+        padding:10px;
+    }
+    .linkeppage a{
+        margin:5px 0;
+       
+    }
+    .returntoorg {
+        justify-content: center;
+    }
+    .navbar {
+        min-height: 70px;
+        max-height: 70px;
+    }
+    #logooo {
+        height: 64px;
+        width: 128px;
+    }
+    .PrevNext a {
+        width: fit-content;
+        height: fit-content;
+        grid-row: 2/3;
+        min-width: 150px;
+        max-width: 160px;
+        margin: 0 auto;
+        border-radius: 50px;
+    }
+    .PrevNext video{
+        grid-row:1/2;
+        grid-column:1/4;
+    }
+    .navbar-toggler {
+        background-color: #5a6092;
+    }
+    #listmobile {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        background-color: #0c0f21;
+        width: 100%;
+        color: black;
+        position: absolute;
+        right: 0;
+    }
+
+    #listmobile li{
+        padding:5px 0;
+    }
+    
+    .PrevNext {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px auto;
+    }
+        .PrevNext p {
+            margin-bottom:0;
+        }
+        .firstcolep {
+            flex-direction: column;
+            width: 100%;
+            padding: 0 15px;
+        }
+    .linkeppage span{
+        display:none;
+    }
+    .linkeppage {
+        margin: 115px auto 10px auto;
+    }
+    .c-item {
+        height: fit-content;
+    }
+
+    header {
+        margin-bottom: 0px;
+    }
+
+    .categoriescont {
+        height: 120px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .card h4 {
+        font-size: 15px;
+    }
+
+    .navbar-brand h5 {
+        font-size: 23px;
+    }
+
+    .MediaPageDivImg {
+        width: 150px;
+        height: 185px;
+        grid-row: 1/2;
+        margin-right: 5%;
+        position:relative;
+    }
+    .row {
+/*        padding: 3% 5%;*/
+    }
+    .MediaContanierPage {
+        margin-top: -90px;
+        grid-template-columns: 1fr;
+        direction: rtl;
+        text-align: start;
+        padding: 5% 0% 0 0%;
+    }
+
+    .coverseassonsimg {
+        height: 160px;
+    }
+
+    .FavPageImg {
+        height: 200px;
+        width: 145px;
+    }
+    .headdr select {
+        width: 150px;
+    }
+        .headdr {
+        flex-wrap: wrap;
+        text-align:end;
+    }
+    .rating{
+        margin:0;   
+    }
+    .rateallwrap{
+        direction:ltr;
+    }
+    .EpisodesDivCont{
+        justify-content:center;
+    }
+    select {
+        min-width: 130px;
+    }
+        .avratediv {
+        justify-content: start;
+    }
+
+    .flexdivv {
+        justify-content: start;
+        flex-direction: row-reverse;
+    }
+
+    .MediaInfoDivPage h2 {
+        margin: 10px 0 25px 0;
+    }
+    .EpisodeVideo{
+        height:180px;
+        width:100%;
+    }
+    .iflexiy{
+        justify-content:space-evenly;
+        margin:10px auto;
+    }
+    .additmedia{
+        flex-direction:column;
+    }
+    .rateallwrap {
+        flex-direction: row;
+        margin:15px 0;
+    }
+    .WatchLaterForm button{
+        width:100%;
+    }
+    .coloms{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .Yourratediv {
+        min-height: 50px;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+        .Yourratediv div{
+            direction:ltr;
+        }
+        .iflexiy div {
+            min-width: 85px;
+            margin: 5px;
+        }
+    .Seasons{
+        flex-direction:column;
+        justify-content:center;
+    }
+        .Seasons a{
+            width:auto;
+            height:360px
+        }
+    .prodimg {
+        width: 180px;
+        height: 85px;
+    }
+    .ratitdiv {
+        height: 37px;
+        font-size:14px;
+        z-index:2;
+        top:9px;
+        left:-135px;
+    }
+        .ratitdiv svg{
+            margin:0;
+        }
+}
+
+
+
+
+
+
+
+
+

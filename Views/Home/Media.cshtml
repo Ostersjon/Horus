@@ -1,0 +1,199 @@
+﻿@model WishList
+
+<div class="coverseassonsimg"><img src="~/images/@ViewBag.Media.Cover" /></div>
+<div class="MediaContanierPage">
+
+    <div class="MediaInfoDivPage">
+        <h2 class="seasonh2div">@ViewBag.Media.Title</h2>
+        <div class="aboutdivv">@ViewBag.Media.about</div>
+        <div class="avratediv">
+            <div class="prodimg">
+                <img src="~/images/@ViewBag.Media.productions.photo" />
+            </div>
+        </div>
+
+        <div class="flexdivv"><div>@ViewBag.Media.Language</div> <p>اللغة</p></div>
+        <div class="flexdivv"> <div>@ViewBag.Media.MovieCountry</div> <p>البلد</p></div>
+        <div class="flexdivv"> <div>@ViewBag.Media.Year</div> <p>سنة الانتاج </p></div>
+        <div class="flexdivv">
+            <div class="iflexiy">@{
+                    foreach (var genre in @ViewBag.Media.MediaGenres)
+                    {
+                        <div>@genre.Genre.Name</div>
+                    }
+                }</div>
+        </div>
+
+        <div class="additmedia">
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    if (@ViewBag.IsFav)
+                    {
+                        <div class="WatchLaterForm">
+                            <button onclick="AddWishFunk()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg>
+                                اضف الي المفضله
+                            </button>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="WatchLaterForm">
+                            <button onclick="RemWishFunk()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                </svg>
+                                ازاله من المفضله
+                            </button>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <a class="WatchLaterForm" href="~/Identity/Account/Login">
+                        <button type="submit">
+                            اضف الي المفضلة                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+                        </button>
+                    </a>
+                }
+            }
+
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+
+                    if (@ViewBag.IsRated == null)
+                    {
+                        <div class="rateallwrap">
+                            <section id="rate" class="rating">
+                                <input type="radio" id="star_5" class="ratt" name="rate" value="5" />
+                                <label for="star_5" title="Five">&#9733;</label>
+                                <input type="radio" id="star_4" class="ratt" name="rate" value="4" />
+                                <label for="star_4" title="Four">&#9733;</label>
+                                <input type="radio" id="star_3" class="ratt" name="rate" value="3" />
+                                <label for="star_3" title="Three">&#9733;</label>
+                                <input type="radio" id="star_2" class="ratt" name="rate" value="2" />
+                                <label for="star_2" title="Two">&#9733;</label>
+                                <input type="radio" id="star_1" class="ratt" name="rate" value="1" />
+                                <label for="star_1" title="One">&#9733;</label>
+                            </section>
+                            <button onclick="RatingFunk(@ViewBag.Media.Id)" class="ratebbtn">Rate</button>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="Yourratediv">
+                            <div>
+
+                                Your Rate @ViewBag.IsRated.rating
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="rateallwrap">
+                        <section id="rate" class="rating">
+                            <input type="radio" id="star_5" class="ratt" name="rate" value="5" />
+                            <label for="star_5" title="Five">&#9733;</label>
+                            <input type="radio" id="star_4" class="ratt" name="rate" value="4" />
+                            <label for="star_4" title="Four">&#9733;</label>
+                            <input type="radio" id="star_3" class="ratt" name="rate" value="3" />
+                            <label for="star_3" title="Three">&#9733;</label>
+                            <input type="radio" id="star_2" class="ratt" name="rate" value="2" />
+                            <label for="star_2" title="Two">&#9733;</label>
+                            <input type="radio" id="star_1" class="ratt" name="rate" value="1" />
+                            <label for="star_1" title="One">&#9733;</label>
+                        </section>
+                        <a href="~/Identity/Account/Login" class="ratebbtn">Rate</a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="MediaPageDivImg">
+        <img src="~/images/@ViewBag.Media.Poster" />
+        <div class="ratitdiv">
+            <p class="pom">@ViewBag.AvRate</p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
+        </div>
+    </div>
+</div>
+
+@{
+    if (@ViewBag.Media.Discriminator == "Movie")
+    {
+        <h1 class="h1Center">مشاهدة</h1>
+        <div>
+            <video class="EpisodeVideo" poster="~/images/@ViewBag.Media.Cover" controls>
+                <source src="@(ViewBag.Media.Video).MOV" type="video/MOV">
+                <source src="@(ViewBag.Media.Video).WMV" type="video/WMV">
+                <source src="@(ViewBag.Media.Video).AVI" type="video/AVI">
+                <source src="@(ViewBag.Media.Video).mp4" type="video/mp4">
+                <source src="@(ViewBag.Media.Video).MKV" type="video/MKV">
+                <source src="@(ViewBag.Media.Video).FLV" type="video/FLV">
+                <source src="@(ViewBag.Media.Video).MPEG-2" type="video/MPEG-2">
+                <source src="@(ViewBag.Media.Video).ogg" type="video/ogg">
+            </video>
+        </div>
+    }
+    else
+    {
+        <h1 class="h1Center">المواسم</h1>
+        <div class="Seasons">
+            @{
+                foreach (var season in @ViewBag.Media.seasons)
+                {
+                    <a class="seasonsLinkMedia" href="~/Home/Seasons/?Mediaid=@ViewBag.Media.Id&id=@season.id"><img src="~/images/@season.Poster" /></a>
+                }
+            }
+        </div>
+    }
+}
+
+<script>
+    let x = 0;
+    let all = document.querySelectorAll("input[name='rate']");
+    let findselected = () => {
+        let selected = document.querySelector("input[name='rate']:checked").value;
+        x = selected;
+        console.log(selected);
+    }
+    all.forEach(rdo => {
+        rdo.addEventListener('change', findselected);
+    })
+    var RatingFunk = (id) => {
+        if (x !== 0) {
+            fetch('/Rating/Add?Type=Media&id=' + id + "&Rate=" + x, {
+                method: 'POST',
+            }).then(() => {
+                setTimeout(location.reload(), 100)
+            });
+        }
+    };
+
+    let AddWishFunk = () => {
+        fetch("/WishLists/Add?Type=Media&id=" + @ViewBag.Media.Id, {
+            method: 'POST'
+        }).then(() => {
+            setTimeout(location.reload(), 100)
+        });
+    };
+
+    let RemWishFunk = () => {
+        fetch("/WishLists/Delete?Type=Media&id=" + @ViewBag.Media.Id, {
+            method: 'DELETE'
+        }).then(() => {
+            setTimeout(location.reload(), 100)
+        });
+    };
+</script>

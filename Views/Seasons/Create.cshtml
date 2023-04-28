@@ -1,0 +1,66 @@
+﻿@model Castle.Dtos.SeasonDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Seasons</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <select id="NameCreateSeason" asp-for="name" class="form-control" ></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mediaid" class="control-label"></label>
+                <select onchange="vruh()" id="seriesiddoc" asp-for="Mediaid" class="form-control" asp-items="ViewBag.Seriesid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Poster" class="control-label"></label>
+                <input asp-for="Poster" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script>
+    //let x = document.querySelector('#seriesiddoc').firstChild.value;
+    let xdiv = document.querySelector('#seriesiddoc');
+    let seasonname = document.querySelector('#NameCreateSeason');
+    let d = document.createElement('option');
+
+    fetch('GetSeasonsof?mediaid=' + xdiv.value)
+        .then(res => res.json()).then(data => {
+            d.innerText = data;
+            d.value = data;
+            seasonname.append(d);
+        });
+
+
+    let vruh = () => {
+ 
+        fetch('GetSeasonsof?mediaid=' + xdiv.value)
+            .then(res => res.json()).then(data => {
+                    d.innerText = data;
+                    d.value = data;
+                    seasonname.append(d);
+            });
+    }
+</script>

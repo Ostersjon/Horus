@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous" />
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+        <a href="~/Home/Media/?id=1011" class="carousel-item active c-item">
+            <img src="~/images/Main/اا28e9.png" class="d-block w-100" alt="...">
+        </a>
+        <a href="~/Home/Media/?id=1" class="carousel-item  c-item">
+            <img src="~/images/Main/ggggg1.png" class="d-block w-100" alt="...">
+        </a>
+        <a href="~/Home/Media/?id=1065" class="carousel-item c-item">
+            <img src="~/images/Main/Untitledff-1.png" class="d-block w-100" alt="...">
+        </a>
+        <a href="~/Home/Media/?id=1064" class="carousel-item c-item">
+            <img src="~/images/Main/gee928لثلثe9.png" class="d-block w-100" alt="...">
+        </a>
+        <a href="~/Home/Media/?id=1091" class="carousel-item c-item">
+            <img src="~/images/Main/gee925599998e9.png" class="d-block w-100" alt="...">
+        </a>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="MainTextDiv">
+    <a href="~/Identity/Account/Register" class="RedBtn">انضم لنا الان</a>
+    <div><span></span><p>او</p><span></span></div>
+    <a href="~/Identity/Account/Login">عضو بالفعل؟ سجل دخول</a>
+</div>
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-12 m-auto">
+            <div class="owl-carousel owl-theme" id="categoryCo">
+                @{
+                    foreach (var Genre in ViewBag.Geners)
+                    {
+
+                        <a href="~/Home/General?category=Any&type=Any&genre=@Genre.id&production=Any&page=1" class="item">
+                            <div class="card border-0 ">
+                                <div class="categoriescont"> <img loading="lazy" src="~/images/@Genre.Photo" alt="" class="card-img-top"> </div>
+                                <div class="card-body">
+                                    <div class="card-title text-center"><h4>@Genre.Name</h4></div>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="containerHMIT">
+
+    @{
+        foreach (var item in @ViewBag.HomeItems)
+        {
+            <p class="cithc">
+                <a href="~/Home/General?category=@item.Category.id&type=Any&genre=Any&production=Any&page=1">@item.Category.Name</a>
+            </p>
+
+            <div>
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 m-auto">
+                            <div class="owl-carousel owl-theme HmIt">
+                                @{
+                                    foreach (var media in item.Media)
+                                    {
+                                        //<div>@media.Title</div>
+                                        <a href="~/Home/Media/?id=@media.Id" class="HmItImgDiv"> <img loading="lazy" src="~/images/@media.Poster" /> </a>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    }
+</div>
+
+<div class="productionscont">
+    @foreach (var pro in @ViewBag.productions)
+    {
+        <a href="~/Home/General?category=Any&type=Any&genre=Any&production=@pro.Id&page=1" class="imgproductionsdiv">
+            <img src="~/images/@pro.photo" />
+        </a>
+    }
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+<script>
+    $('#categoryCo').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        responsive: {
+            0: {
+                items: 2,
+                slideBy: 2,
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 7,
+                slideBy: 7,
+            }
+        }
+    })
+
+    $('.HmIt').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        dots: false,
+
+        speed: 10,
+        responsive: {
+            0: {
+                items: 1.6,
+                slideBy: 1,
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 6,
+                slideBy: 6,
+            }
+        }
+    })
+</script>

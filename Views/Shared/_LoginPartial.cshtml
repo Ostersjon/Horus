@@ -1,0 +1,41 @@
+﻿@using Castle.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IUser> SignInManager
+@inject UserManager<IUser> UserManager
+
+<ul class="navbar-nav" id="SecNavSec">
+
+    <li class="Searchapp"> 
+        <div class="divsearchdiv">
+            <input onchange="GoToSrch" id="SearchIn" placeholder="Search here..." type="text" /> <button onclick="GoToSrch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </button>
+        </div>
+        </li>
+@if(SignInManager.IsSignedIn(User))
+{
+
+    <li class="nav-item">
+           @{
+               if(User.Identity.IsAuthenticated){
+                    <a id="IUSERIMG" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><img src="~/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png" /></a>
+           }}
+    </li>
+    <li id="BtnLogout" class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link ">خروج</button>
+        </form>
+    </li>
+}
+
+</ul>
+<script>
+let searched = document.querySelector('#SearchIn');
+let GoToSrch = ()=>{
+    if (searched.value !== "") {
+    window.location.href = '/Home/Search?searched=' + searched.value;
+    }
+}
+</script>
